@@ -1,0 +1,58 @@
+{
+    "cards": [
+
+        {
+            "type": "unit",
+            "name": "squirrel",
+            "image": "squirrel.png",
+            "tribe": "vermin",
+            "costType": 0,
+            "power": 0,
+            "health": 1
+        },
+
+        {
+            "type": "unit",
+            "name": "wolf",
+            "image": "wolf.png",
+            "tribe": "canine",
+            "costType": 1,
+            "costAmount": 2,
+            "power": 3,
+            "health": 2
+        },
+
+        {
+            "type": "unit",
+            "name": "bullfrog",
+            "image": "bullfrog.png",
+            "tribe": "reptile",
+            "costType": 1,
+            "costAmount": 1,
+            "power": 1,
+            "health": 2,
+            "sigils": [
+                {
+                    "type" :"MightyLeap"
+                }
+            ]
+        },
+
+        {
+            "type": "unit",
+            "name": "sparrow",
+            "image": "sparrow.png",
+            "tribe": "avian",
+            "costType": 1,
+            "costAmount": 1,
+            "power": 1,
+            "health": 2,
+            "sigils": [
+                {
+                    "type" :"Airborne"
+                }
+            ]
+        }
+
+    ]
+}

@@ -5,12 +5,26 @@ var matches = {}
 
 // Events //
 $(document).ready(function() {
-    JoinMatchLobby()
+    JoinMatchLobby();
 });
 
 socket.on('UpdateMatchList', function(message) {
     matches = message;
     RenderMatchList();
+});
+
+//Create match button
+$(document).on("click", ".matchEntry", function() {
+    mId = $(this).text()
+    JoinMatch(mId);
+});
+
+$(document).on("click", ".createMatchButton", function() {
+    CreateMatch();
+});
+
+socket.on('NewMatchCreated', function(matchId) {
+    JoinMatch(matchId)
 });
 
 
@@ -26,19 +40,15 @@ function JoinMatchLobby() {
 function RenderMatchList() {
     var matchList = $(".matchList")
     matchList.empty()
-    for (var matchId in matches) {
-        matchList.append("<li class='matchEntry'>"+matches[matchId]+"</li>");
+    for (var mid in matches) {
+        matchList.append("<li class='matchEntry'>"+mid+"</li>");
     }
 }
 
 function CreateMatch() {
-    $.ajax({
-        url: "/createMatch",
-        type: "POST",
+    socket.emit("CreateMatch")
+}
 
-        success: function(response) {
-            console.log(response)
-        },
-        error: PrintResponse
-    })
+function JoinMatch(matchId) {
+    window.location.href = "/match?id="+matchId
 }

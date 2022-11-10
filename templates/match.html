@@ -3,36 +3,41 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
     <script src="{{url_for('static', filename='javascript/match.js')}}"></script>
+    <script type="text/javascript">
+        matchId = "{{ matchId }}";
+     </script>
 
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/match.css') }}">
 
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
 
-<body>
-    <div class="table">
-        <ul class="boardSide enemySide">
-            <li class="boardCard card"></li>
-            <li class="boardCard card"></li>
-            <li class="boardCard card"></li>
-            <li class="boardCard card"></li>
-        </ul>
-        <ul class="boardSide allySide">
-            <li class="boardCard card"></li>
-            <li class="boardCard card"></li>
-            <li class="boardCard card"></li>
-            <li class="boardCard card"></li>
-        </ul>
-    </div>
+<body data-new-gr-c-s-check-loaded="14.1009.0" data-gr-ext-installed="">
+    <p class="speech">Waiting for player...</p>
+    <div class="vision">
+        <img src="images/eyes.png" class="eyes" hidden>
+        <div class="table">
+            <ul class="boardSide enemySide">
+                <li class="boardSpace"></li>
+                <li class="boardSpace"></li>
+                <li class="boardSpace"></li>
+                <li class="boardSpace"></li>
+            </ul>
+            <ul class="boardSide allySide">
+                <li class="boardSpace"></li>
+                <li class="boardSpace"></li>
+                <li class="boardSpace"></li>
+                <li class="boardSpace"></li>
+            </ul>
+        </div>
 
-    <ul class="hand">
-        <li class="handCard card"></li>
-    </ul>
-    
-    <div class="scale"></div>
-    <div class="bell"></div>
-    <div class="bones"></div>
-    <div class="candle"></div>
-    <div class="skullCandle"></div>
+        <div class="scale"></div>
+        <div class="bell"></div>
+        <div class="bones"></div>
+        <div class="candle"></div>
+        <div class="skullCandle"></div>
+
+        <ul class="hand"></ul>
+    </div>
     
 </body>

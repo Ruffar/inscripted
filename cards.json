@@ -5,7 +5,7 @@
             "type": "unit",
             "name": "squirrel",
             "image": "squirrel.png",
-            "tribe": "vermin",
+            "tribes": ["vermin"],
             "costType": 0,
             "power": 0,
             "health": 1
@@ -13,9 +13,20 @@
 
         {
             "type": "unit",
+            "name": "stoat",
+            "image": "stoat.png",
+            "tribes": ["vermin"],
+            "costType": 1,
+            "costAmount": 1,
+            "power": 1,
+            "health": 2
+        },
+
+        {
+            "type": "unit",
             "name": "wolf",
             "image": "wolf.png",
-            "tribe": "canine",
+            "tribes": ["canine"],
             "costType": 1,
             "costAmount": 2,
             "power": 3,
@@ -26,15 +37,13 @@
             "type": "unit",
             "name": "bullfrog",
             "image": "bullfrog.png",
-            "tribe": "reptile",
+            "tribes": ["reptile"],
             "costType": 1,
             "costAmount": 1,
             "power": 1,
             "health": 2,
             "sigils": [
-                {
-                    "type" :"MightyLeap"
-                }
+                "mightyleap"
             ]
         },
 
@@ -42,15 +51,13 @@
             "type": "unit",
             "name": "sparrow",
             "image": "sparrow.png",
-            "tribe": "avian",
+            "tribes": ["avian"],
             "costType": 1,
             "costAmount": 1,
             "power": 1,
             "health": 2,
             "sigils": [
-                {
-                    "type" :"Airborne"
-                }
+                "airborne"
             ]
         }
 

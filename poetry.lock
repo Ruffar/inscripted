@@ -7,6 +7,14 @@ optional = false
 python-versions = ">=3.6"
 
 [[package]]
+name = "cachelib"
+version = "0.6.0"
+description = "A collection of cache libraries in the same API interface."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
 name = "click"
 version = "8.0.4"
 description = "Composable command line interface toolkit"
@@ -71,6 +79,18 @@ Werkzeug = ">=2.0"
 [package.extras]
 async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
+
+[[package]]
+name = "flask-session"
+version = "0.4.0"
+description = "Adds server-side session support to your Flask application"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+cachelib = "*"
+Flask = ">=0.8"
 
 [[package]]
 name = "flask-socketio"
@@ -213,12 +233,16 @@ h11 = ">=0.9.0,<1"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8.0,<3.9"
-content-hash = "5f0f87c7213ca80f6019f14155cec086bb96c4caae0ff16756abb34cc76703d2"
+content-hash = "941fe76e14aaeaa06af1860addc90c21c894460c1708ce23411b3be2e0bcc974"
 
 [metadata.files]
 bidict = [
     {file = "bidict-0.21.4-py3-none-any.whl", hash = "sha256:3ac67daa353ecf853a1df9d3e924f005e729227a60a8dbada31a4c31aba7f654"},
     {file = "bidict-0.21.4.tar.gz", hash = "sha256:42c84ffbe6f8de898af6073b4be9ea7ccedcd78d3474aa844c54e49d5a079f6f"},
+]
+cachelib = [
+    {file = "cachelib-0.6.0-py3-none-any.whl", hash = "sha256:6da323fdb16c9f53424a229132646a469b2d046e687fa353b92303910c99bc18"},
+    {file = "cachelib-0.6.0.tar.gz", hash = "sha256:0baa926a23924c04ae1354091478b15b3b24e6cf5931dd159452afda5f65babd"},
 ]
 click = [
     {file = "click-8.0.4-py3-none-any.whl", hash = "sha256:6a7a62563bbfabfda3a38f3023a1db4a35978c0abd76f6c9605ecd6554d6d9b1"},
@@ -239,6 +263,10 @@ eventlet = [
 flask = [
     {file = "Flask-2.0.3-py3-none-any.whl", hash = "sha256:59da8a3170004800a2837844bfa84d49b022550616070f7cb1a659682b2e7c9f"},
     {file = "Flask-2.0.3.tar.gz", hash = "sha256:e1120c228ca2f553b470df4a5fa927ab66258467526069981b3eb0a91902687d"},
+]
+flask-session = [
+    {file = "Flask-Session-0.4.0.tar.gz", hash = "sha256:c9ed54321fa8c4ca0132ffd3369582759eda7252fb4b3bee480e690d1ba41f46"},
+    {file = "Flask_Session-0.4.0-py2.py3-none-any.whl", hash = "sha256:1e3f8a317005db72c831f85d884a5a9d23145f256c730d80b325a3150a22c3db"},
 ]
 flask-socketio = [
     {file = "Flask-SocketIO-5.1.1.tar.gz", hash = "sha256:1efdaacc7a26e94f2b197a80079b1058f6aa644a6094c0a322349e2b9c41f6b1"},
